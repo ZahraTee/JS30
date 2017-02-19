@@ -22,7 +22,14 @@ html, body {
   	padding: 1rem .25rem;
 	position: relative;
 	text-align: center;
+	transition: all ease .1s;
 	width: 5rem;
+}
+
+.playing {
+	transform: scale(1.1);
+	border: #cc66cc solid 1px;
+	box-shadow: 0 0 1rem #cc66cc;
 }
 
 .letter {
