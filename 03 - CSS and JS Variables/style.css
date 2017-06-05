@@ -1,0 +1,39 @@
+:root {
+	--blur: 10px;
+	--grayscale: 1;
+	--opacity: 1;
+}
+
+html, body {
+	background: #000;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 100;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+img {
+	position: relative;
+	margin: 40px auto;
+	max-width: 90%;
+	width: 700px;
+	filter: blur(var(--blur)) grayscale(var(--grayscale)) opacity(var(--opacity));
+}
+
+input {
+	width: 100px;
+}
+
+label {
+	display: inline-block;
+	margin-right: 10px;
+	text-align: right;
+	width: 70px;
+}
