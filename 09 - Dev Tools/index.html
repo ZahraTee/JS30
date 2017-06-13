@@ -18,28 +18,53 @@
     }
 
     // Regular
+    console.log('This is a regular log!');
 
     // Interpolated
+    console.log('This is an %s log!', 'interpolated');
 
     // Styled
+    console.log('%c This is a styled log!', 'font-style:italic; color: purple');
 
     // warning!
+    console.warn('This is a warning!');
 
     // Error :|
+    console.error('This is an error! Oh no!');
 
     // Info
+    console.info('This is some important info!');
 
     // Testing
+    console.assert('This is an' === 'Assert', 'Not the same!!!');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    /*console.log(p);
+    console.dir(p);*/
 
     // Grouping together
+    console.group();
+    dogs.map(dog => console.log(`${dog.name} is ${dog.age} years old!`));
+    console.groupEnd();
 
     // counting
+    console.count('Lion');
+    console.count('Lion');
+    console.count('Tiger');
+    console.count('Bear');
+    console.count('Tiger');
+    console.count('Lion');
+    console.count('Bear');
+    console.count('Tiger');
+    console.count('Bear');
+    console.count('Lion');
 
     // timing
+    console.time('Timer time!');
+    setTimeout(() => console.timeEnd("Timer done after"), 1000);
 
   </script>
 </body>
