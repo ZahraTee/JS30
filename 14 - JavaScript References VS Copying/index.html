@@ -8,15 +8,25 @@
 
   <script>
     // start with strings, numbers and booleans
+    let age = 22;
+    let age2 = 23;
+
+    console.log(age, age2);
+    age = 100;
+    console.log(age, age2);
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
     // and we want to make a copy of it.
+    const team = players;
+    console.log(team, players)
 
     // You might think we can just do something like this:
+    //team[0] = 'Wesley';
 
     // however what happens when we update that array?
+    console.log(team, players)
 
     // now here is the problem!
 
@@ -25,26 +35,52 @@
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
-
-    // one day
+    
+    // one way
+    const team2 = players.slice();
 
     // or create a new array and concat the old one in
+    const team3 = [].concat(players);
 
     // or use the new ES6 Spread
+    const team4 = [...players];
+
+    // or one more way
+    const team5 = Array.from(players);
 
     // now when we update it, the original one isn't changed
 
     // The same thing goes for objects, let's say we have a person object
 
     // with Objects
+    const person = {
+      name: 'Zahra',
+      age: 22
+    }
 
     // and think we make a copy:
+    const dev = person;
+    //dev.editor = "VS Code";
 
     // how do we take a copy instead?
+    Object.assign({}, person, {editor: "VS Code", startYear: 2013});
 
     // We will hopefully soon see the object ...spread
+    //const devCopy = {...person};
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const zahra = {
+      name: 'Zahra',
+      age: 22,
+      social: {
+        github: 'ZahraTee',
+        twitter: 'zahrataiba'
+      }
+    }
+
+    console.log(zahra);
+    const zahraCopy = Object.assign({}, zahra);
+    const zahraCopy2 = JSON.parse(JSON.stringify(zahra));
 
   </script>
 
