@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+</head>
+<body>
+<script>
+
+  const pressedKeys = []
+  const secretKeyCode = "zahra"
+  
+  window.addEventListener('keyup', (e) => {
+    pressedKeys.push(e.key);
+    pressedKeys.splice(-secretKeyCode.length-1, pressedKeys.length - secretKeyCode.length);
+    if (pressedKeys.join('').includes(secretKeyCode)) {
+      alert("YOU CRACKED THE CODE!");
+    }
+  })
+</script>
+</body>
+</html>
